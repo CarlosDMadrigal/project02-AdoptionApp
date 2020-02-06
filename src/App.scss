@@ -1,93 +1,107 @@
 @import 'typeface-roboto';
 .contact {
-  background-color: #2e3237;
-  color: #ffffff;
-  padding: 0 0.5rem 0 9.5%;
-  height: 3rem;
-  &__left {
-    height: 100%;
+ background-color: #2e3237;
+ color: #ffffff;
+ padding: 0 0.5rem 0 9.5%;
+ height: 3rem;
+ &__left {
+  height: 100%;
+  &-email {
+   width: 1rem;
   }
-  &__right {
-    height: 100%;
-    &-email {
-      width: 1rem;
-    }
+ }
+ &__right {
+  height: 100%;
+  &-icon {
+   margin: 1rem;
   }
+ }
 }
 
 header {
-  // position: fixed;
-  z-index: 1;
+ // position: fixed;
+ z-index: 1;
 }
 .navbar {
-  .headers {
-    background-color: #ffffff;
-    padding-left: 10%;
-    & .header {
-      background-color: #ffffff;
-      height: 2rem;
-      color: #2e3237;
-      padding: 0;
-      & .header {
-        &__tabs {
-          color: #2e3237;
-          font-size: 0.1rem;
-          margin-left: 14rem;
-        }
-      }
+ .headers {
+  background-color: #ffffff;
+  padding-left: 10%;
+  & .header {
+   background-color: #ffffff;
+   height: 2rem;
+   color: #2e3237;
+   padding: 0;
+   & .header {
+    &__tabs {
+     color: #2e3237;
+     font-size: 0.1rem;
+     margin-left: 14rem;
     }
+   }
   }
+ }
 }
 .home {
-  .slide {
-    box-sizing: border-box;
+ .slide {
+  box-sizing: border-box;
+  color: #ffffff;
+  height: 44rem;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./img/landing-first-image.jpg');
+  padding-left: 10%;
+  padding-top: 14rem;
+  &__title {
+   width: 45%;
+  }
+  &__buttons {
+   margin-top: 3rem;
+   &-primary {
+    background-color: #399ced;
+    &:hover {
+     background-color: #2d7cbd;
+    }
+   }
+   &-secondary {
+    margin-left: 2rem;
     color: #ffffff;
-    height: 88vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('./img/landing-first-image.jpg');
-    padding-left: 10%;
-    padding-top: 14rem;
-    &__title {
-      width: 45%;
+    border-color: #ffffff;
+    &:hover {
+     color: #343f53;
+     background-color: #ffffff;
+     border-color: #ffffff;
     }
-    &__buttons {
-      margin-top: 3rem;
-      &-primary {
-        background-color: #399ced;
-        &:hover {
-          background-color: #2d7cbd;
-        }
-      }
-      &-secondary {
-        margin-left: 2rem;
-        color: #ffffff;
-        border-color: #ffffff;
-        &:hover {
-          color: #343f53;
-          background-color: #ffffff;
-          border-color: #ffffff;
-        }
-      }
+   }
+  }
+ }
+ .pets {
+  height: 39rem;
+  color: #343f53;
+  &__cards {
+   margin-top: 1rem;
+   .card {
+    margin: 1rem;
+    max-width: 345px;
+    &__figure {
+     height: 300px;
     }
+   }
   }
-  .pets {
-    height: 65vh;
-    color: #343f53;
-    &__cards {
-      .card {
-        margin: 1rem;
-        max-width: 345px;
-        &__figure {
-          height: 300px;
-        }
-      }
+ }
+ .team {
+  color: #343f53;
+  height: 34rem;
+  &-pictures {
+   margin-top: 2.5rem;
+   &__member {
+    &-figure {
+     width: 20rem;
+     height: 20rem;
+     margin-bottom: 0.5rem;
     }
+   }
   }
-  .team {
-    color: #343f53;
-    height: 50vh;
-  }
+ }
 }
