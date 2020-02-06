@@ -5,16 +5,16 @@ import Header from './components/Header'
 import HomePage from './pages/Home'
 
 function App() {
- return (
-  <div className="App">
-   <Router>
-    <Header></Header>
-    <Switch>
-     <Route path="/" component={HomePage} />
-    </Switch>
-   </Router>
-  </div>
- )
+  return (
+    <div className='App'>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route path='/' component={HomePage} />
+        </Switch>
+      </Router>
+    </div>
+  )
 }
 
 export default App

@@ -1,38 +1,86 @@
 @import 'typeface-roboto';
 .contact {
- background-color: #2e3237;
- color: #ffffff;
- padding: 0 0.5rem 0 10%;
- height: 3rem;
- &__left {
-  width: 50%;
- }
-}
-.navbar .headers {
- background-color: #ffffff;
- padding-left: 10%;
- & .header {
-  background-color: #ffffff;
-  height: 2rem;
-  color: #2e3237;
-  padding: 0;
-  & .header {
-   &__tabs {
-    color: #2e3237;
-    font-size: 0.1rem;
-    margin-left: 14rem;
-   }
+  background-color: #2e3237;
+  color: #ffffff;
+  padding: 0 0.5rem 0 9.5%;
+  height: 3rem;
+  &__left {
+    height: 100%;
   }
- }
+  &__right {
+    height: 100%;
+    &-email {
+      width: 1rem;
+    }
+  }
+}
+
+header {
+  // position: fixed;
+  z-index: 1;
+}
+.navbar {
+  .headers {
+    background-color: #ffffff;
+    padding-left: 10%;
+    & .header {
+      background-color: #ffffff;
+      height: 2rem;
+      color: #2e3237;
+      padding: 0;
+      & .header {
+        &__tabs {
+          color: #2e3237;
+          font-size: 0.1rem;
+          margin-left: 14rem;
+        }
+      }
+    }
+  }
 }
 .home {
- &-register {
-  color: red;
-  height: 86vh;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('./img/landing-first-image.jpg');
- }
+  .slide {
+    box-sizing: border-box;
+    color: #ffffff;
+    height: 88vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./img/landing-first-image.jpg');
+    padding-left: 10%;
+    padding-top: 14rem;
+    &__title {
+      width: 45%;
+    }
+    &__buttons {
+      margin-top: 3rem;
+      &-primary {
+        background-color: #399ced;
+        &:hover {
+          background-color: #2d7cbd;
+        }
+      }
+      &-secondary {
+        margin-left: 2rem;
+        color: #ffffff;
+        border-color: #ffffff;
+        &:hover {
+          color: #343f53;
+          background-color: #ffffff;
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+  .pets {
+    height: 50vh;
+    color: #343f53;
+  }
+}
+.card {
+  max-width: 345px;
+}
+.algo {
+  height: 140px;
 }
