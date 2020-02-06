@@ -1,0 +1,38 @@
+@import 'typeface-roboto';
+.contact {
+ background-color: #2e3237;
+ color: #ffffff;
+ padding: 0 0.5rem 0 10%;
+ height: 3rem;
+ &__left {
+  width: 50%;
+ }
+}
+.navbar .headers {
+ background-color: #ffffff;
+ padding-left: 10%;
+ & .header {
+  background-color: #ffffff;
+  height: 2rem;
+  color: #2e3237;
+  padding: 0;
+  & .header {
+   &__tabs {
+    color: #2e3237;
+    font-size: 0.1rem;
+    margin-left: 14rem;
+   }
+  }
+ }
+}
+.home {
+ &-register {
+  color: red;
+  height: 86vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./img/landing-first-image.jpg');
+ }
+}
