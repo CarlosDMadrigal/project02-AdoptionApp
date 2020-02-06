@@ -1,1 +1,6 @@
-export const APLICATION_NAME = 'Adoption'
+export const APPLICATION_NAME = 'Adoption'
+export const APPLICATION_MAIL = 'adoption@mail.co'
+export const APPLICATION_SUPPORT_MAIL = 'adoptionSupport@gmail.com'
+export const APPLICATION_SUPPORT_PHONE = '+506 1133-4597'
+export const APPLICATION_PHONE = '+506 8573-9587'
+export const APPLICATION_ADDRESS = 'Cartago, Tres Rios'

@@ -1,5 +1,8 @@
 import React from 'react'
-import { APLICATION_NAME } from '../../costants/AplicationCostants'
+import {
+ APPLICATION_NAME,
+ APPLICATION_MAIL,
+} from '../../costants/AplicationCostants'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -12,7 +15,7 @@ function NavBar({ value, handleChange }) {
    <AppBar position="static" className="headers">
     <Toolbar className="header">
      <Typography variant="h6" className="header__name">
-      {APLICATION_NAME}
+      {APPLICATION_NAME}
      </Typography>
      <Tabs
       value={value}
@@ -73,7 +76,7 @@ function ContactBar() {
      className="contact__left-email"
     >
      <Email />
-     adoption@pet.mail
+     {APPLICATION_MAIL}
     </Grid>
     <Grid
      component="span"

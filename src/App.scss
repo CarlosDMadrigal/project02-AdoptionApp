@@ -20,6 +20,7 @@
 
 header {
  // position: fixed;
+
  z-index: 1;
 }
 .navbar {
@@ -79,20 +80,23 @@ header {
  .pets {
   height: 39rem;
   color: #343f53;
+  &__title {
+   margin-top: 1.59rem;
+  }
   &__cards {
    margin-top: 1rem;
    .card {
     margin: 1rem;
-    max-width: 345px;
+    max-width: 21.9rem;
     &__figure {
-     height: 300px;
+     height: 18rem;
     }
    }
   }
  }
  .team {
   color: #343f53;
-  height: 34rem;
+  height: 38rem;
   &-pictures {
    margin-top: 2.5rem;
    &__member {
@@ -103,5 +107,51 @@ header {
     }
    }
   }
+ }
+ .information {
+  height: 48rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('./img/ubication-image.png');
+  .card {
+   width: 57.1rem;
+   height: 13rem;
+   background-color: #ffffff;
+   margin-bottom: 3rem;
+   color: #343f53;
+   &__col {
+    width: 19rem;
+    height: 13rem;
+    box-sizing: border-box;
+    &-address {
+     p {
+      margin-top: 3rem;
+     }
+     border-right: 1px solid #efefef;
+    }
+    &-support {
+     p {
+      margin-top: 3rem;
+     }
+     border-left: 1px solid #efefef;
+    }
+    &-contact {
+     p {
+      margin-top: 3rem;
+     }
+    }
+   }
+  }
+ }
+}
+
+.footer {
+ height: 7rem;
+ padding-left: 10%;
+ background-color: #2e3237;
+ color: #ffffff;
+ &__info {
+  margin-right: 2rem;
  }
 }
