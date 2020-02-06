@@ -1,12 +1,14 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
+import exampleImg01 from '../../img/example-01.jpg'
+import exampleImg02 from '../../img/example-02.jpg'
+import exampleImg03 from '../../img/example-03.jpg'
+import { APLICATION_NAME } from '../../costants/AplicationCostants'
 import {
   Grid,
   Typography,
   Button,
   Card,
-  CardActionArea,
-  CardActions,
   CardContent,
   CardMedia
 } from '@material-ui/core'
@@ -65,33 +67,69 @@ function HomePage() {
           </Box>
           <Box fontSize='h6.fontSize'>Find you perfect match today!.</Box>
         </Grid>
-        <Grid className='pets__cards'>
+        <Grid container justify='center' className='pets__cards'>
           <Card className='card'>
-            <CardActionArea>
-              <CardMedia
-                className='algo'
-                image='/static/images/cards/contemplative-reptile.jpg'
-                title='Contemplative Reptile'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  Lizard
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size='small' color='primary'>
-                Share
-              </Button>
-              <Button size='small' color='primary'>
-                Learn More
-              </Button>
-            </CardActions>
+            <CardMedia
+              className='card__figure'
+              image={exampleImg02}
+              title='Golden Retriever puppy picture'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Kuni
+              </Typography>
+              <Typography variant='body2' color='textSecondary' component='p'>
+                She's one of the babies my cat had half a year ago but i can't
+                keep her.
+              </Typography>
+            </CardContent>
           </Card>
+          <Card className='card'>
+            <CardMedia
+              className='card__figure'
+              image={exampleImg01}
+              title='Golden Retriever puppy picture'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Scott
+              </Typography>
+              <Typography variant='body2' color='textSecondary' component='p'>
+                We found scott in the trash with a couple of toilet paper rolls.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className='card'>
+            <CardMedia
+              className='card__figure'
+              image={exampleImg03}
+              title='Golden Retriever puppy picture'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Robert
+              </Typography>
+              <Typography variant='body2' color='textSecondary' component='p'>
+                Robert is a very energetic boy and i don't have enough space to
+                let him play.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Typography>
+      <Typography component='section' className='team'>
+        <Grid
+          container
+          alignItems='center'
+          direction='column'
+          className='team__title'
+        >
+          <Box fontSize='h3.fontSize' fontWeight='fontWeightMedium'>
+            Meet Our team
+          </Box>
+          <Box fontSize='h6.fontSize'>
+            {APLICATION_NAME} has a team of experts that gives it support 24/7.
+          </Box>
         </Grid>
       </Typography>
     </Grid>

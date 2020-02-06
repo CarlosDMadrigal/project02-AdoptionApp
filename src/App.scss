@@ -74,13 +74,20 @@ header {
     }
   }
   .pets {
-    height: 50vh;
+    height: 65vh;
     color: #343f53;
+    &__cards {
+      .card {
+        margin: 1rem;
+        max-width: 345px;
+        &__figure {
+          height: 300px;
+        }
+      }
+    }
   }
-}
-.card {
-  max-width: 345px;
-}
-.algo {
-  height: 140px;
+  .team {
+    color: #343f53;
+    height: 50vh;
+  }
 }
