@@ -1,158 +1,198 @@
 @import 'typeface-roboto';
 .contact {
-  background-color: #2e3237;
-  color: #ffffff;
-  padding: 0 0.5rem 0 9.5%;
-  height: 3rem;
-  &__left {
-    height: 100%;
-    &-email {
-      width: 1rem;
-    }
+ background-color: #2e3237;
+ color: #ffffff;
+ padding: 0 0.5rem 0 9.5%;
+ height: 3rem;
+ &__left {
+  height: 100%;
+  &-email {
+   width: 1rem;
   }
-  &__right {
-    height: 100%;
-    &-icon {
-      margin: 1rem;
-    }
+ }
+ &__right {
+  height: 100%;
+  &-icon {
+   margin: 1rem;
   }
+ }
 }
 
 header {
-  // position: fixed;
+ // position: fixed;
 
-  z-index: 1;
+ z-index: 1;
 }
 .navbar {
-  .headers {
-    background-color: #ffffff;
-    padding-left: 10%;
-    & .header {
-      background-color: #ffffff;
-      height: 2rem;
-      color: #2e3237;
-      padding: 0;
-      & .header {
-        &__tabs {
-          color: #2e3237;
-          font-size: 0.1rem;
-          margin-left: 14rem;
-        }
-      }
+ .headers {
+  background-color: #ffffff;
+  padding-left: 10%;
+  & .header {
+   background-color: #ffffff;
+   height: 2rem;
+   color: #2e3237;
+   padding: 0;
+   & .header {
+    &__tabs {
+     color: #2e3237;
+     font-size: 0.1rem;
+     margin-left: 14rem;
     }
+   }
   }
+ }
 }
 .home {
-  .slide {
-    box-sizing: border-box;
+ .slide {
+  box-sizing: border-box;
+  color: #ffffff;
+  height: 44rem;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./img/landing-first-image.jpg');
+  padding-left: 10%;
+  padding-top: 14rem;
+  &__title {
+   width: 45%;
+  }
+  &__buttons {
+   margin-top: 3rem;
+   &-secondary {
+    margin-left: 2rem;
     color: #ffffff;
-    height: 44rem;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('./img/landing-first-image.jpg');
-    padding-left: 10%;
-    padding-top: 14rem;
-    &__title {
-      width: 45%;
+    border-color: #ffffff;
+    &:hover {
+     color: #343f53;
+     background-color: #ffffff;
+     border-color: #ffffff;
     }
-    &__buttons {
+   }
+  }
+ }
+ .pets {
+  height: 39rem;
+  color: #343f53;
+  &__title {
+   margin-top: 1.59rem;
+  }
+  &__cards {
+   margin-top: 1rem;
+   .card {
+    margin: 1rem;
+    max-width: 21.9rem;
+    &__figure {
+     height: 18rem;
+    }
+   }
+  }
+ }
+ .team {
+  color: #343f53;
+  height: 38rem;
+  &-pictures {
+   margin-top: 2.5rem;
+   &__member {
+    &-figure {
+     width: 20rem;
+     height: 20rem;
+     margin-bottom: 0.5rem;
+    }
+   }
+  }
+ }
+ .information {
+  height: 48rem;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('./img/ubication-image.png');
+  .card {
+   width: 57.1rem;
+   height: 13rem;
+   background-color: #ffffff;
+   margin-bottom: 3rem;
+   color: #343f53;
+   &__col {
+    width: 19rem;
+    height: 13rem;
+    box-sizing: border-box;
+    &-address {
+     p {
       margin-top: 3rem;
-      &-primary {
-        background-color: #399ced;
-        &:hover {
-          background-color: #2d7cbd;
-        }
-      }
-      &-secondary {
-        margin-left: 2rem;
-        color: #ffffff;
-        border-color: #ffffff;
-        &:hover {
-          color: #343f53;
-          background-color: #ffffff;
-          border-color: #ffffff;
-        }
-      }
+     }
+     border-right: 1px solid #efefef;
     }
+    &-support {
+     p {
+      margin-top: 3rem;
+     }
+     border-left: 1px solid #efefef;
+    }
+    &-contact {
+     p {
+      margin-top: 3rem;
+     }
+    }
+   }
   }
-  .pets {
-    height: 39rem;
-    color: #343f53;
-    &__title {
-      margin-top: 1.59rem;
-    }
-    &__cards {
-      margin-top: 1rem;
-      .card {
-        margin: 1rem;
-        max-width: 21.9rem;
-        &__figure {
-          height: 18rem;
-        }
-      }
-    }
-  }
-  .team {
-    color: #343f53;
-    height: 38rem;
-    &-pictures {
-      margin-top: 2.5rem;
-      &__member {
-        &-figure {
-          width: 20rem;
-          height: 20rem;
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-  }
-  .information {
-    height: 48rem;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-image: url('./img/ubication-image.png');
-    .card {
-      width: 57.1rem;
-      height: 13rem;
-      background-color: #ffffff;
-      margin-bottom: 3rem;
-      color: #343f53;
-      &__col {
-        width: 19rem;
-        height: 13rem;
-        box-sizing: border-box;
-        &-address {
-          p {
-            margin-top: 3rem;
-          }
-          border-right: 1px solid #efefef;
-        }
-        &-support {
-          p {
-            margin-top: 3rem;
-          }
-          border-left: 1px solid #efefef;
-        }
-        &-contact {
-          p {
-            margin-top: 3rem;
-          }
-        }
-      }
-    }
-  }
+ }
 }
 
 .footer {
-  height: 7rem;
-  padding-left: 10%;
-  background-color: #2e3237;
-  color: #ffffff;
-  &__info {
-    margin-right: 2rem;
+ height: 7rem;
+ padding-left: 10%;
+ background-color: #2e3237;
+ color: #ffffff;
+ &__info {
+  margin-right: 2rem;
+ }
+}
+.list {
+ padding: 5% 10%;
+ color: #343f53;
+ &__card {
+  width: 15rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+  transition: transform 1s;
+  &:hover {
+   transform: scale(1.03);
+   transition: transform 0.5s;
+   cursor: pointer;
   }
+  &:active {
+   transform: scale(1);
+  }
+  &-figure {
+   height: 60%;
+  }
+ }
+}
+
+.dogs {
+ padding-top: 2rem;
+ color: #343f53;
+}
+
+.search {
+ width: 20rem;
+ padding: 0 10%;
+ .search__form {
+  width: 30rem;
+  margin-left: 1rem;
+  &-input {
+   &:focus {
+    border-color: #399ced;
+   }
+  }
+  &-button {
+   cursor: pointer;
+   &:hover {
+    cursor: pointer;
+   }
+  }
+ }
 }

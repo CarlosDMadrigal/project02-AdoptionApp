@@ -7,18 +7,18 @@ import DogsListPage from './pages/Dogs'
 import Footer from './components/Footer'
 
 function App(props) {
-  return (
-    <div className='App'>
-      <Router>
-        <Header history={props.history}></Header>
-        <Switch>
-          <Route path='/' component={HomePage} />
-          <Route path='/dogs' component={DogsListPage} />
-        </Switch>
-        <Footer></Footer>
-      </Router>
-    </div>
-  )
+ return (
+  <div className="App">
+   <Router>
+    <Header history={props.history}></Header>
+    <Switch>
+     <Route path="/dogs" component={DogsListPage} />
+     <Route path="/" component={HomePage} />
+    </Switch>
+    <Footer></Footer>
+   </Router>
+  </div>
+ )
 }
 
 export default App
