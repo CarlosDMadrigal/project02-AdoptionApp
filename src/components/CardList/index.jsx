@@ -1,55 +1,106 @@
 import React from 'react'
-import { Grid, Link, Button } from '@material-ui/core'
+import { Grid, Link, Button, Box } from '@material-ui/core'
 import PetCard from '../PetCard'
 
 function CardList(props) {
- const [page, setPage] = React.useState(0)
- const [list, setList] = React.useState([])
- const cardStyles = {
-  card: 'list__card',
-  picture: 'list__card-figure',
-  title: 'list__card-title',
-  info: 'list__card-info',
- }
- let { data } = props
- const displayList = []
- let chunk = 12
+  const [page, setPage] = React.useState(0)
+  const cardStyles = {
+    card: 'list__card',
+    picture: 'list__card-figure',
+    title: 'list__card-title',
+    info: 'list__card-info'
+  }
+  let { data, handleCardClick } = props
+  const displayList = []
+  let chunk = 12
 
- for (let i = 0; i < data.length; i += chunk) {
-  displayList.push(data.slice(i, i + chunk))
- }
- console.log(list)
+  for (let i = 0; i < data.length; i += chunk) {
+    displayList.push(data.slice(i, i + chunk))
+  }
 
- const incPage = event => {
-  setPage(page + 1)
-  setList(displayList[page])
- }
+  const incPageHandleClick = () => {
+    setPage(page + 1)
+  }
+  const decPageHandleClick = () => {
+    setPage(page - 1)
+  }
+  const lastPageHandleClick = () => {
+    setPage(displayList.length - 1)
+  }
+  const firstPageHandleClick = () => {
+    setPage(displayList.length - 1)
+  }
 
- const decPage = event => {
-  setPage(page - 1)
-  setList(displayList[page])
- }
-
- return (
-  <Grid component="section" className="list" container direction="column">
-   <Grid component="div" container direction="row" justify="space-evenly">
-    {displayList[page].map((content, i) => {
-     return <PetCard content={content} styles={cardStyles} key={i} />
-    })}
-   </Grid>
-   <Grid component="div" container direction="row" justify="flex-end">
-    <Button variant="outlined" onClick={decPage} disabled={page === 0}>
-     {`<`}
-    </Button>
-    <Link component="button" variant="body2" onClick={() => {}}>
-     {page + 1}
-    </Link>
-    <Button variant="outlined" onClick={incPage}>
-     {`>`}
-    </Button>
-   </Grid>
-  </Grid>
- )
+  return (
+    <Grid component='section' className='list' container direction='column'>
+      <Grid component='div' container direction='row' justify='space-between'>
+        {displayList[page].map(content => {
+          return (
+            <PetCard
+              content={content}
+              styles={cardStyles}
+              key={content.id}
+              handleCardClick={handleCardClick}
+            />
+          )
+        })}
+      </Grid>
+      <Grid
+        component='div'
+        container
+        direction='row'
+        justify='flex-end'
+        className='pagination'
+      >
+        <Button
+          variant='outlined'
+          onClick={decPageHandleClick}
+          disabled={page === 0}
+        >
+          {`<`}
+        </Button>
+        <Box
+          fontSize='h6.fontSize'
+          align='center'
+          className='pagination__links'
+        >
+          <Link
+            component='button'
+            variant='body2'
+            onClick={firstPageHandleClick}
+          >
+            {page + 1}
+          </Link>
+          <Box
+            component='span'
+            display={
+              page + 1 === displayList.length || displayList.length <= 1
+                ? 'none'
+                : 'inline'
+            }
+          >
+            ...
+          </Box>
+          {!(page + 1 === displayList.length || displayList.length <= 1) && (
+            <Link
+              component='button'
+              variant='body2'
+              onClick={lastPageHandleClick}
+            >
+              {displayList.length}
+            </Link>
+          )}
+        </Box>
+        <Button
+          variant='outlined'
+          onClick={incPageHandleClick}
+          disabled={page + 1 >= displayList.length}
+        >
+          {`>`}
+        </Button>
+      </Grid>
+    </Grid>
+  )
 }
 
 export default CardList
