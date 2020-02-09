@@ -2,19 +2,16 @@
 .contact {
   background-color: #2e3237;
   color: #ffffff;
-  padding: 0 0.5rem 0 9.5%;
+  padding: 0 10% 0 9.5%;
   height: 3rem;
-  &__left {
-    height: 100%;
-    &-email {
-      width: 1rem;
-    }
+  .contact__address {
+    width: 10rem;
   }
-  &__right {
-    height: 100%;
-    &-icon {
-      margin: 1rem;
-    }
+  .contact__email {
+    width: 10rem;
+  }
+  .contact__phone {
+    width: 10rem;
   }
 }
 
@@ -26,7 +23,7 @@ header {
 .navbar {
   .headers {
     background-color: #ffffff;
-    padding-left: 10%;
+    padding: 0 10%;
     & .header {
       background-color: #ffffff;
       height: 2rem;
@@ -143,11 +140,14 @@ header {
 
 .footer {
   height: 7rem;
-  padding-left: 10%;
+  padding: 0 10%;
   background-color: #2e3237;
   color: #ffffff;
   &__info {
     margin-right: 2rem;
+  }
+  .footer__contact {
+    width: 9rem;
   }
 }
 .list {
@@ -160,7 +160,7 @@ header {
     transition: transform 1s;
     &:hover {
       transform: scale(1.03);
-      transition: transform 0.5s;
+      transition: transform 0.1s;
       cursor: pointer;
     }
     &:active {
@@ -204,4 +204,30 @@ header {
 }
 .detail {
   padding: 5rem 10%;
+  &__picture {
+    width: 35rem;
+    img {
+      width: 100%;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .pet {
+    width: 29rem;
+    color: #343f53;
+    padding: 0 0 0 4rem;
+  }
+  .information {
+    padding: 0 0 0 2.5rem;
+    &-row {
+      margin-top: 1rem;
+    }
+    &__detail {
+      margin-top: 5rem;
+      &-title {
+      }
+    }
+  }
 }

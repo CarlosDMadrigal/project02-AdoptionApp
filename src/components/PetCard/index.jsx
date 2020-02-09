@@ -18,7 +18,12 @@ function PetCard({ content, styles, handleCardClick }) {
         >
           {content.name}
         </Typography>
-        <Typography variant='body2' component='p' className={styles.info}>
+        <Typography
+          variant='body2'
+          component='p'
+          className={styles.info}
+          overflow='hidden'
+        >
           {content.info}
         </Typography>
       </CardContent>

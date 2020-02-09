@@ -11,7 +11,7 @@ function App(props) {
   return (
     <div className='App'>
       <Router>
-        <Header history={props.history}></Header>
+        <Header></Header>
         <Switch>
           <Route path='/detail/:id' component={PetDetailPage} />
           <Route path='/dogs' component={DogsListPage} />
