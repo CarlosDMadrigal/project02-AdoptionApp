@@ -5,33 +5,39 @@ import SearchBar from '../../components/SearchBar'
 import { usePetsByTypeAndName, usePets } from '../../hooks/usePets'
 
 function OthersListPage(props) {
-  const [values, setValues] = React.useState({
-    searchValue: ''
-  })
-  usePets()
-  let { pets } = usePetsByTypeAndName('other', values.searchValue)
-  let { history } = props
+ const [values, setValues] = React.useState({
+  searchValue: '',
+ })
+ usePets()
+ let { pets } = usePetsByTypeAndName('other', values.searchValue)
+ let { history } = props
 
-  const handleClick = () => {}
+ const handleClick = () => {}
 
-  const handleChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+ const handleChange = prop => event => {
+  setValues({ ...values, [prop]: event.target.value })
+ }
 
-  const handleCardClick = id => {
-    history.push(`/detail/${id}`)
-  }
+ const handleCardClick = id => {
+  history.push(`/detail/${id}`)
+ }
 
-  return (
-    <Grid component='section' container justify='center' className='dogs'>
-      <SearchBar
-        handleClick={handleClick}
-        handleChange={handleChange}
-        values={values}
-      ></SearchBar>
-      <CardList data={pets} handleCardClick={handleCardClick}></CardList>
-    </Grid>
-  )
+ return (
+  <Grid
+   component="section"
+   container
+   justify="center"
+   className="list-container"
+  >
+   <SearchBar
+    listName={`other pets`}
+    handleClick={handleClick}
+    handleChange={handleChange}
+    values={values}
+   ></SearchBar>
+   <CardList data={pets} handleCardClick={handleCardClick}></CardList>
+  </Grid>
+ )
 }
 
 export default OthersListPage
