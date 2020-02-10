@@ -9,7 +9,7 @@ function PetCard({ content, styles, handleCardClick }) {
         image={content.picture}
         title={`${content.name} picture`}
       />
-      <CardContent>
+      <CardContent overflow='hidden'>
         <Typography
           gutterBottom
           variant='h5'

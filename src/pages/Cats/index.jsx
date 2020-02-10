@@ -4,28 +4,15 @@ import CardList from '../../components/CardList'
 import SearchBar from '../../components/SearchBar'
 import { usePetsByTypeAndName, usePets } from '../../hooks/usePets'
 
-function DogsListPage(props) {
+function CatsListPage(props) {
   const [values, setValues] = React.useState({
     searchValue: ''
   })
-
   usePets()
-  let { pets } = usePetsByTypeAndName('dog', values.searchValue)
+  let { pets } = usePetsByTypeAndName('cat', values.searchValue)
   let { history } = props
 
-  const handleClick = () => {
-    // let newList = []
-    // for (let i = 0; i < values.list.length; i++) {
-    //   if (
-    //     values.list[i].name
-    //       .toLowerCase()
-    //       .includes(values.searchValue.toLowerCase())
-    //   ) {
-    //     newList.push(values.list[i])
-    //     setValues({ ...values, filteredList: newList })
-    //   }
-    // }
-  }
+  const handleClick = () => {}
 
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value })
@@ -47,4 +34,4 @@ function DogsListPage(props) {
   )
 }
 
-export default DogsListPage
+export default CatsListPage

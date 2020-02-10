@@ -3,241 +3,259 @@ import exampleImg01 from '../../img/example-01.jpg'
 import exampleImg02 from '../../img/example-02.jpg'
 import exampleImg03 from '../../img/example-03.jpg'
 import {
- APPLICATION_NAME,
- APPLICATION_MAIL,
- APPLICATION_SUPPORT_MAIL,
- APPLICATION_PHONE,
- APPLICATION_SUPPORT_PHONE,
+  APPLICATION_NAME,
+  APPLICATION_MAIL,
+  APPLICATION_SUPPORT_MAIL,
+  APPLICATION_PHONE,
+  APPLICATION_SUPPORT_PHONE
 } from '../../costants/AplicationCostants'
 import {
- Box,
- Grid,
- Typography,
- Button,
- Card,
- CardContent,
- CardMedia,
- Avatar,
+  Box,
+  Grid,
+  Typography,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Avatar
 } from '@material-ui/core'
 
 function StartSection() {
- return (
-  <Grid component="section" className="slide">
-   <Typography component="div">
-    <Box
-     fontSize="h2.fontSize"
-     fontWeight="fontWeightMedium"
-     className="slide__title"
-    >
-     Thinking about adopting a new friend?
-    </Box>
-    <Box fontSize="h5.fontSize" className="slide__text">
-     Try lookin at the different kind of partners you can get with our help.
-    </Box>
-   </Typography>
-   <Box className="slide__buttons">
-    <Button
-     variant="contained"
-     color="primary"
-     size="large"
-     disableElevation
-     className="slide__buttons-primary"
-    >
-     Find out how
-    </Button>
-    <Button
-     color="primary"
-     size="large"
-     disableElevation
-     className="slide__buttons-secondary"
-     variant="outlined"
-     component="span"
-    >
-     Want to put in adoption
-    </Button>
-   </Box>
-  </Grid>
- )
+  return (
+    <Grid component='section' className='slide'>
+      <Typography component='div'>
+        <Box
+          fontSize='h2.fontSize'
+          fontWeight='fontWeightMedium'
+          className='slide__title'
+        >
+          Thinking about adopting a new friend?
+        </Box>
+        <Box fontSize='h5.fontSize' className='slide__text'>
+          Try lookin at the different kind of partners you can get with our
+          help.
+        </Box>
+      </Typography>
+      <Box className='slide__buttons'>
+        <Button
+          variant='contained'
+          color='primary'
+          size='large'
+          disableElevation
+          className='slide__buttons-primary'
+        >
+          Find out how
+        </Button>
+        <Button
+          color='primary'
+          size='large'
+          disableElevation
+          className='slide__buttons-secondary'
+          variant='outlined'
+          component='span'
+        >
+          Want to put in adoption
+        </Button>
+      </Box>
+    </Grid>
+  )
 }
 
 function PetsSection() {
- return (
-  <Typography component="section" className="pets">
-   <Grid
-    container
-    alignItems="center"
-    direction="column"
-    className="pets__title"
-   >
-    <Box fontSize="h3.fontSize" fontWeight="fontWeightMedium">
-     Our Pets
-    </Box>
-    <Box fontSize="h6.fontSize">
-     We have wonderful cats and dogs ready for adoption.
-    </Box>
-    <Box fontSize="h6.fontSize">Find you perfect match today!</Box>
-   </Grid>
-   <Grid container justify="center" className="pets__cards">
-    <Card className="card">
-     <CardMedia
-      className="card__figure"
-      image={exampleImg02}
-      title="white cat picture"
-     />
-     <CardContent>
-      <Typography gutterBottom variant="h5" component="h2">
-       Kuni
-      </Typography>
-      <Typography variant="body2" color="textSecondary" component="p">
-       She's one of the babies my cat had half a year ago but i can't keep her.
-      </Typography>
-     </CardContent>
-    </Card>
-    <Card className="card">
-     <CardMedia
-      className="card__figure"
-      image={exampleImg01}
-      title="Golden Retriever puppy picture"
-     />
-     <CardContent>
-      <Typography gutterBottom variant="h5" component="h2">
-       Scott
-      </Typography>
-      <Typography variant="body2" color="textSecondary" component="p">
-       We found scott in the trash with a couple of toilet paper rolls.
-      </Typography>
-     </CardContent>
-    </Card>
-    <Card className="card">
-     <CardMedia
-      className="card__figure"
-      image={exampleImg03}
-      title="dog with a stick picture"
-     />
-     <CardContent>
-      <Typography gutterBottom variant="h5" component="h2">
-       Robert
-      </Typography>
-      <Typography variant="body2" color="textSecondary" component="p">
-       Robert is a very energetic boy and i don't have enough space to let him
-       play.
-      </Typography>
-     </CardContent>
-    </Card>
-   </Grid>
-  </Typography>
- )
+  return (
+    <Typography component='section' className='pets'>
+      <Grid
+        container
+        alignItems='center'
+        direction='column'
+        className='pets__title'
+      >
+        <Box fontSize='h3.fontSize' fontWeight='fontWeightMedium'>
+          Our Pets
+        </Box>
+        <Box fontSize='h6.fontSize'>
+          We have wonderful cats and dogs ready for adoption.
+        </Box>
+        <Box fontSize='h6.fontSize'>Find you perfect match today!</Box>
+      </Grid>
+      <Grid container justify='space-between' className='pets__cards'>
+        <Card className='card'>
+          <CardMedia
+            className='card__figure'
+            image={exampleImg02}
+            title='white cat picture'
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              Kuni
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              She's one of the babies my cat had half a year ago but i can't
+              keep her.
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className='card'>
+          <CardMedia
+            className='card__figure'
+            image={exampleImg01}
+            title='Golden Retriever puppy picture'
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              Scott
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              We found scott in the trash with a couple of toilet paper rolls.
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className='card'>
+          <CardMedia
+            className='card__figure'
+            image={exampleImg03}
+            title='dog with a stick picture'
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              Robert
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              Robert is a very energetic boy and i don't have enough space to
+              let him play.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Typography>
+  )
 }
 
 function TeamSection() {
- return (
-  <Typography component="section" className="team">
-   <Grid
-    container
-    alignItems="center"
-    direction="column"
-    className="team__title"
-   >
-    <Box fontSize="h3.fontSize" fontWeight="fontWeightMedium">
-     Meet Our team
-    </Box>
-    <Box fontSize="h6.fontSize">
-     {APPLICATION_NAME} has a team of experts that gives it support 24/7.
-    </Box>
-   </Grid>
-   <Grid container alignItems="center" className="team__pictures">
-    <Grid
-     container
-     alignItems="center"
-     direction="column"
-     className="team-pictures"
-    >
-     <Avatar
-      alt="Carlos Madrigal"
-      src=""
-      className="team-pictures__member-figure"
-     />
-     <Box
-      component="span"
-      className="pictures__member-name"
-      fontSize="h5.fontSize"
-      fontWeight="fontWeightMedium"
-     >
-      Carlos Madrigal
-     </Box>
-     <Box component="span" className="pictures__member-ocupation">
-      Application Developer
-     </Box>
-    </Grid>
-   </Grid>
-  </Typography>
- )
+  return (
+    <Typography component='section' className='team'>
+      <Grid
+        container
+        alignItems='center'
+        direction='column'
+        className='team__title'
+      >
+        <Box fontSize='h3.fontSize' fontWeight='fontWeightMedium'>
+          Meet Our team
+        </Box>
+        <Box fontSize='h6.fontSize'>
+          {APPLICATION_NAME} has a team of experts that gives it support 24/7.
+        </Box>
+      </Grid>
+      <Grid container alignItems='center' className='team__pictures'>
+        <Grid
+          container
+          alignItems='center'
+          direction='column'
+          className='team-pictures'
+        >
+          <Avatar
+            alt='Carlos Madrigal'
+            src=''
+            className='team-pictures__member-figure'
+          />
+          <Box
+            component='span'
+            className='pictures__member-name'
+            fontSize='h5.fontSize'
+            fontWeight='fontWeightMedium'
+          >
+            Carlos Madrigal
+          </Box>
+          <Box component='span' className='pictures__member-ocupation'>
+            Application Developer
+          </Box>
+        </Grid>
+      </Grid>
+    </Typography>
+  )
 }
 
 function InformationSection() {
- return (
-  <Typography component="section">
-   <Grid
-    container
-    alignItems="flex-end"
-    justify="center"
-    className="information"
-   >
-    <Box className="card" boxShadow={3}>
-     <Grid container justify="center">
+  return (
+    <Typography component='section'>
       <Grid
-       component="div"
-       className="card__col card__col-address"
-       container
-       direction="column"
-       alignItems="center"
+        container
+        alignItems='flex-end'
+        justify='center'
+        className='information'
       >
-       <Box component="p" fontSize="h6.fontSize" fontWeight="fontWeightMedium">
-        Our Address
-       </Box>
-       <Box component="span">Tres Rios, Cartago Province</Box>
-       <Box component="span">Terra Campus Corporativo</Box>
+        <Box className='card' boxShadow={3}>
+          <Grid container justify='center'>
+            <Grid
+              component='div'
+              className='card__col card__col-address'
+              container
+              direction='column'
+              alignItems='center'
+            >
+              <Box
+                component='p'
+                fontSize='h6.fontSize'
+                fontWeight='fontWeightMedium'
+              >
+                Our Address
+              </Box>
+              <Box component='span'>Tres Rios, Cartago Province</Box>
+              <Box component='span'>Terra Campus Corporativo</Box>
+            </Grid>
+            <Grid
+              component='div'
+              className='card__col card__col-contact'
+              container
+              direction='column'
+              alignItems='center'
+            >
+              <Box
+                component='p'
+                fontSize='h6.fontSize'
+                fontWeight='fontWeightMedium'
+              >
+                Contact Info
+              </Box>
+              <Box component='span'>Phone:{` ${APPLICATION_PHONE}`}</Box>
+              <Box component='span'>E-mail:{` ${APPLICATION_MAIL}`}</Box>
+            </Grid>
+            <Grid
+              component='div'
+              className='card__col card__col-support'
+              container
+              direction='column'
+              alignItems='center'
+            >
+              <Box
+                component='p'
+                fontSize='h6.fontSize'
+                fontWeight='fontWeightMedium'
+              >
+                Our Support
+              </Box>
+              <Box component='span'>
+                Phone:{` ${APPLICATION_SUPPORT_PHONE}`}
+              </Box>
+              <Box component='span'>
+                E-mail:{` ${APPLICATION_SUPPORT_MAIL}`}
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Grid>
-      <Grid
-       component="div"
-       className="card__col card__col-contact"
-       container
-       direction="column"
-       alignItems="center"
-      >
-       <Box component="p" fontSize="h6.fontSize" fontWeight="fontWeightMedium">
-        Contact Info
-       </Box>
-       <Box component="span">Phone:{` ${APPLICATION_PHONE}`}</Box>
-       <Box component="span">E-mail:{` ${APPLICATION_MAIL}`}</Box>
-      </Grid>
-      <Grid
-       component="div"
-       className="card__col card__col-support"
-       container
-       direction="column"
-       alignItems="center"
-      >
-       <Box component="p" fontSize="h6.fontSize" fontWeight="fontWeightMedium">
-        Our Support
-       </Box>
-       <Box component="span">Phone:{` ${APPLICATION_SUPPORT_PHONE}`}</Box>
-       <Box component="span">E-mail:{` ${APPLICATION_SUPPORT_MAIL}`}</Box>
-      </Grid>
-     </Grid>
-    </Box>
-   </Grid>
-  </Typography>
- )
+    </Typography>
+  )
 }
 function HomePage() {
- return (
-  <Grid component="div" className="home">
-   <StartSection></StartSection>
-   <PetsSection></PetsSection>
-   <TeamSection></TeamSection>
-   <InformationSection></InformationSection>
-  </Grid>
- )
+  return (
+    <Grid component='div' className='home'>
+      <StartSection></StartSection>
+      <PetsSection></PetsSection>
+      <TeamSection></TeamSection>
+      <InformationSection></InformationSection>
+    </Grid>
+  )
 }
 export default HomePage

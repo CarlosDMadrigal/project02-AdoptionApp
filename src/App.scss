@@ -16,9 +16,8 @@
 }
 
 header {
-  // position: fixed;
-
   z-index: 1;
+  width: 100%;
 }
 .navbar {
   .headers {
@@ -33,7 +32,6 @@ header {
         &__tabs {
           color: #2e3237;
           font-size: 0.1rem;
-          margin-left: 14rem;
         }
       }
     }
@@ -49,8 +47,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('./img/landing-first-image.jpg');
-    padding-left: 10%;
-    padding-top: 14rem;
+    padding: 14rem 10% 0;
     &__title {
       width: 45%;
     }
@@ -69,6 +66,7 @@ header {
     }
   }
   .pets {
+    padding: 0 10%;
     height: 39rem;
     color: #343f53;
     &__title {
@@ -76,18 +74,25 @@ header {
     }
     &__cards {
       margin-top: 1rem;
+      transition: transform 0.5s;
       .card {
         margin: 1rem;
-        max-width: 21.9rem;
+        max-width: 17.85rem;
         &__figure {
-          height: 18rem;
+          height: 16rem;
+        }
+        &:hover {
+          transition: transform 0.5s;
+          transform: scale(1.1);
         }
       }
     }
   }
   .team {
+    padding: 3rem 10% 0;
     color: #343f53;
     height: 38rem;
+    background-color: #fafafa;
     &-pictures {
       margin-top: 2.5rem;
       &__member {
@@ -154,8 +159,8 @@ header {
   padding: 5% 10%;
   color: #343f53;
   &__card {
-    width: 15rem;
-    height: 20rem;
+    width: 14rem;
+    height: 19rem;
     margin-bottom: 2rem;
     transition: transform 1s;
     &:hover {
@@ -197,6 +202,7 @@ header {
   }
 }
 .pagination {
+  margin-top: 2rem;
   &__links {
     margin: 0 0.5rem;
     align-self: flex-end;
@@ -205,29 +211,39 @@ header {
 .detail {
   padding: 5rem 10%;
   &__picture {
-    width: 35rem;
+    display: flex;
+    justify-content: center;
+    width: 50%;
     img {
-      width: 100%;
+      height: 25rem;
       transition: transform 0.5s;
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
   .pet {
-    width: 29rem;
+    width: 50%;
     color: #343f53;
     padding: 0 0 0 4rem;
+    &__name {
+      height: 4rem;
+    }
   }
   .information {
+    width: 100%;
     padding: 0 0 0 2.5rem;
-    &-row {
-      margin-top: 1rem;
-    }
     &__detail {
-      margin-top: 5rem;
-      &-title {
-      }
+      margin-top: 2rem;
+      width: 100%;
+      margin-bottom: 1rem;
     }
+  }
+}
+.adoption {
+  padding: 2rem 10%;
+  .form {
+    padding: 2rem 20%;
+    width: 100%;
   }
 }

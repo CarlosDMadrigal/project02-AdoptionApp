@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Link, Button, Box } from '@material-ui/core'
 import PetCard from '../PetCard'
 
-function CardList(props) {
+function CardList({ data, handleCardClick }) {
   const [page, setPage] = React.useState(0)
   const cardStyles = {
     card: 'list__card',
@@ -10,7 +10,6 @@ function CardList(props) {
     title: 'list__card-title',
     info: 'list__card-info'
   }
-  let { data, handleCardClick } = props
   const displayList = []
   let chunk = 12
 
@@ -27,23 +26,29 @@ function CardList(props) {
   const lastPageHandleClick = () => {
     setPage(displayList.length - 1)
   }
-  const firstPageHandleClick = () => {
-    setPage(displayList.length - 1)
-  }
 
   return (
     <Grid component='section' className='list' container direction='column'>
       <Grid component='div' container direction='row' justify='space-between'>
-        {displayList[page].map(content => {
-          return (
-            <PetCard
-              content={content}
-              styles={cardStyles}
-              key={content.id}
-              handleCardClick={handleCardClick}
-            />
-          )
-        })}
+        {displayList.length ? (
+          displayList[page].map(content => {
+            return (
+              <PetCard
+                content={content}
+                styles={cardStyles}
+                key={content.id}
+                handleCardClick={handleCardClick}
+              />
+            )
+          })
+        ) : (
+          <Grid container justify='center' alignItems='flex-start'>
+            <Box
+              fontSize='h5.fontSize'
+              component='span'
+            >{`...It seems we don't have any other pet right now, maybe later ;)`}</Box>
+          </Grid>
+        )}
       </Grid>
       <Grid
         component='div'
@@ -64,11 +69,7 @@ function CardList(props) {
           align='center'
           className='pagination__links'
         >
-          <Link
-            component='button'
-            variant='body2'
-            onClick={firstPageHandleClick}
-          >
+          <Link component='button' variant='body2'>
             {page + 1}
           </Link>
           <Box
