@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Box, Typography, Button } from '@material-ui/core'
 import ArrowBack from '@material-ui/icons/ArrowBackIos'
 import { usePetById } from '../../hooks/usePets'
+import PetsIcon from '@material-ui/icons/Pets'
 
 function PetDetailPage({ match, history }) {
   let { pet } = usePetById(match.params.id)
@@ -33,6 +34,13 @@ function PetDetailPage({ match, history }) {
           justify='space-between'
         >
           <Box component='span' className='information__genre'>
+            <PetsIcon
+              className={
+                pet.gender === 'female'
+                  ? 'information__genre-icon pink'
+                  : 'information__genre-icon blue'
+              }
+            />{' '}
             {pet.gender}
           </Box>
           <Typography className='information__detail'>{pet.info}</Typography>

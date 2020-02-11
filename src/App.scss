@@ -1,292 +1,291 @@
 @import 'typeface-roboto';
-.contact {
- background-color: #2e3237;
- color: #ffffff;
- padding: 0 10% 0 9.5%;
- height: 3rem;
- .contact__address {
-  width: 10rem;
- }
- .contact__email {
-  width: 10rem;
- }
- .contact__phone {
-  width: 10rem;
- }
-}
 
 header {
- z-index: 1;
- width: 100%;
+  z-index: 1;
+  width: 100%;
 }
 .navbar {
- .headers {
-  background-color: #ffffff;
-  padding: 0 10%;
-  & .header {
-   background-color: #ffffff;
-   height: 2rem;
-   color: #2e3237;
-   padding: 0;
-   & .header {
-    &__tabs {
-     color: #2e3237;
-     font-size: 0.1rem;
+  .headers {
+    background-color: #ffffff;
+    padding: 0 10%;
+    & .header {
+      background-color: #ffffff;
+      height: 2rem;
+      color: #2e3237;
+      padding: 0;
+      & .header {
+        &__tabs {
+          color: #2e3237;
+          font-size: 0.1rem;
+        }
+      }
     }
-   }
   }
- }
 }
 .home {
- .blueline {
-  width: 6rem;
-  height: 0.2rem;
-  background-color: #3f51b5;
-  margin-bottom: 1rem;
- }
- .slide {
-  box-sizing: border-box;
-  color: #ffffff;
-  height: 44rem;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('./img/landing-first-image.jpg');
-  padding: 14rem 10% 0;
-  text-shadow: 1px 1px 2px #000000;
-  &__title {
-   width: 45%;
+  .blueline {
+    width: 6rem;
+    height: 0.2rem;
+    background-color: #3f51b5;
+    margin-bottom: 1rem;
   }
-  &__buttons {
-   margin-top: 3rem;
-   &-secondary {
-    margin-left: 2rem;
-    color: #ffffff;
-    border-color: #ffffff;
-    &:hover {
-     color: #343f53;
-     background-color: #ffffff;
-     border-color: #ffffff;
-     text-shadow: none;
-    }
-   }
-  }
- }
- .pets {
-  padding: 0 10%;
-  height: 39rem;
-  color: #343f53;
-  &__title {
-   margin-top: 1.59rem;
-  }
-  &__cards {
-   margin-top: 1rem;
-   transition: transform 0.5s;
-   .card {
-    margin: 1rem;
-    max-width: 17.85rem;
-    &__figure {
-     height: 16rem;
-    }
-    &:hover {
-     transition: transform 0.5s;
-     transform: scale(1.1);
-    }
-   }
-  }
- }
- .team {
-  padding: 3rem 10% 0;
-  color: #343f53;
-  height: 38rem;
-  background-color: #fafafa;
-  &-pictures {
-   margin-top: 2.5rem;
-   &__member {
-    &-figure {
-     width: 20rem;
-     height: 20rem;
-     margin-bottom: 0.5rem;
-    }
-   }
-  }
- }
- .information {
-  height: 48rem;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-image: url('./img/ubication-image.png');
-  .card {
-   width: 57.1rem;
-   height: 13rem;
-   background-color: #ffffff;
-   margin-bottom: 3rem;
-   color: #343f53;
-   &__col {
-    width: 19rem;
-    height: 13rem;
+  .slide {
     box-sizing: border-box;
-    &-address {
-     p {
-      margin-top: 3rem;
-     }
-     border-right: 1px solid #efefef;
+    color: #ffffff;
+    height: 44rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./img/landing-first-image.jpg');
+    padding: 14rem 10% 0;
+
+    &__title {
+      width: 50%;
+      line-height: 4rem;
     }
-    &-support {
-     p {
+    &__buttons {
       margin-top: 3rem;
-     }
-     border-left: 1px solid #efefef;
+      &-secondary {
+        margin-left: 2rem;
+        color: #ffffff;
+        border-color: #ffffff;
+        &:hover {
+          color: #343f53;
+          background-color: #ffffff;
+          border-color: #ffffff;
+          text-shadow: none;
+        }
+      }
     }
-    &-contact {
-     p {
-      margin-top: 3rem;
-     }
-    }
-   }
   }
- }
+  .pets {
+    padding: 0 10%;
+    height: auto;
+    color: #343f53;
+    &__title {
+      margin-top: 1.59rem;
+    }
+    &__cards {
+      margin-top: 1rem;
+      transition: transform 0.5s;
+      .card {
+        margin: 1rem;
+        max-width: 17.85rem;
+        &__figure {
+          height: 16rem;
+        }
+        &:hover {
+          transition: transform 0.5s;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .team {
+    padding: 3rem 10% 0;
+    color: #343f53;
+    height: auto;
+    background-color: #fafafa;
+    &-pictures {
+      margin-top: 2.5rem;
+      &__member {
+        &-figure {
+          width: 17rem;
+          height: 17rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  .information {
+    height: 48rem;
+    width: 100%;
+    background-size: fit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./img/ubication-image.png');
+    .card {
+      width: auto;
+      height: auto;
+      background-color: #ffffff;
+      margin-bottom: 3rem;
+      color: #343f53;
+      &__col {
+        width: 19rem;
+        height: 13rem;
+        box-sizing: border-box;
+        border: 1px solid #efefef;
+        &-address {
+          p {
+            margin-top: 3rem;
+          }
+        }
+        &-support {
+          p {
+            margin-top: 3rem;
+          }
+        }
+        &-contact {
+          p {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer {
- height: 7rem;
- padding: 0 10%;
- background-color: #2e3237;
- color: #ffffff;
- &__info {
-  margin-right: 2rem;
- }
- .footer__contact {
-  width: 9rem;
- }
+  height: 7rem;
+  padding: 0 10%;
+  background-color: #2e3237;
+  color: #ffffff;
+  &__info {
+    margin-right: 2rem;
+  }
+  .footer__contact {
+    width: 9rem;
+  }
 }
 .list {
- padding: 5% 10%;
- color: #343f53;
- &__card {
-  width: 15rem;
-  height: 19rem;
-  margin-bottom: 2rem;
-  transition: transform 1s;
-  &:hover {
-   transform: scale(1.03);
-   transition: transform 0.1s;
-   cursor: pointer;
+  padding: 5% 10%;
+  color: #343f53;
+  height: 70vh;
+  &__card {
+    width: 15rem;
+    height: 19rem;
+    margin-bottom: 2rem;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.03);
+      transition: transform 0.1s;
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(1);
+    }
+    &-figure {
+      height: 60%;
+    }
   }
-  &:active {
-   transform: scale(1);
-  }
-  &-figure {
-   height: 60%;
-  }
- }
 }
 
 .list-container {
- padding-top: 2rem;
- color: #343f53;
+  padding-top: 2rem;
+  color: #343f53;
 }
 
 .search {
- width: 20rem;
- padding: 0 10%;
- .search__form {
-  width: 30rem;
-  margin-left: 1rem;
-  &-input {
-   &:focus {
-    border-color: #399ced;
-   }
+  width: 20rem;
+  padding: 0 10%;
+  .search__form {
+    width: 30rem;
+    margin-left: 1rem;
+    &-input {
+      &:focus {
+        border-color: #399ced;
+      }
+    }
+    &-button {
+      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
-  &-button {
-   cursor: pointer;
-   &:hover {
-    cursor: pointer;
-   }
-  }
- }
 }
 .pagination {
- margin-top: 2rem;
- &__links {
-  margin: 0 0.5rem;
-  align-self: flex-end;
- }
+  margin-top: 2rem;
+  &__links {
+    margin: 0 0.5rem;
+  }
 }
 .detail {
- padding: 5rem 10%;
- &__picture {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  img {
-   height: 25rem;
-   transition: transform 0.5s;
-   &:hover {
-    transform: scale(1.1);
-   }
+  padding: 5rem 10%;
+  height: auto;
+  &__picture {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    img {
+      height: 25rem;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
- }
- .pet {
-  width: 50%;
-  color: #343f53;
-  padding: 0 0 0 4rem;
-  &__name {
-   height: 4rem;
+  .pet {
+    width: 50%;
+    color: #343f53;
+    padding: 0 0 0 4rem;
+    &__name {
+      height: 4rem;
+    }
   }
- }
- .information {
-  width: 100%;
-  padding: 0 0 0 2.5rem;
-  &__detail {
-   margin-top: 2rem;
-   width: 100%;
-   margin-bottom: 1rem;
+  .information {
+    width: 100%;
+    padding: 0 0 0 2.5rem;
+    .blue {
+      color: #5b92e5;
+    }
+    .pink {
+      color: #f8b9d4;
+    }
+    &__genre {
+      display: flex;
+      align-items: center;
+    }
+    &__detail {
+      margin-top: 2rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
- }
 }
 .adoption {
- padding: 2rem 10%;
- .form {
-  padding: 2rem 20%;
-  width: 100%;
-  color: #343f53;
-  &__ {
-   &warning {
-    margin-top: 1rem;
-   }
-   &name {
-    margin-top: 2.5rem;
-   }
-   &title {
-    border-bottom: solid 1px #c4c4c4;
-   }
-   &radio {
-    margin-top: 1rem;
-    &-buttons {
-     margin-top: 1rem;
+  padding: 2rem 10%;
+  .form {
+    padding: 2rem 20%;
+    width: 100%;
+    color: #343f53;
+    &__ {
+      &warning {
+        margin-top: 1rem;
+      }
+      &name {
+        margin-top: 2.5rem;
+      }
+      &title {
+        border-bottom: solid 1px #c4c4c4;
+      }
+      &radio {
+        margin-top: 1rem;
+        &-buttons {
+          margin-top: 1rem;
+        }
+      }
+      margin-top: 3rem;
+      &upload {
+        margin-top: 1rem;
+        &-label {
+          margin-top: 1rem;
+        }
+        &-input {
+          display: none;
+        }
+      }
+      &submit {
+        margin-top: 1rem;
+        border-top: solid 1px #c4c4c4;
+        &-button {
+          margin-top: 1rem;
+        }
+      }
     }
-   }
-   margin-top: 3rem;
-   &upload {
-    margin-top: 1rem;
-    &-label {
-     margin-top: 1rem;
-    }
-    &-input {
-     display: none;
-    }
-   }
-   &submit {
-    margin-top: 1rem;
-    border-top: solid 1px #c4c4c4;
-    &-button {
-     margin-top: 1rem;
-    }
-   }
   }
- }
+}
+
+@media (max-width: 600px) {
 }
