@@ -55,6 +55,7 @@ function PetDetailPage({ match, history }) {
           component='div'
           className='information'
           container
+          justify='space-between'
           direction='column'
         >
           <Box component='span' className='information__genre'>
