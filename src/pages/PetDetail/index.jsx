@@ -11,77 +11,79 @@ function PetDetailPage({ match, history }) {
   }
 
   return (
-    <Grid
-      component='section'
-      className='detail'
-      container
-      direction={{
-        xs: 'column',
-        sm: 'column',
-        md: 'row',
-        lg: 'row',
-        xl: 'row'
-      }}
-    >
+    <Box className='pet-details'>
       <Grid
+        component='section'
+        className='detail'
         container
-        item
-        lg={6}
-        justify='center'
-        component='div'
-        className='detail__picture'
+        direction={{
+          xs: 'column',
+          sm: 'column',
+          md: 'row',
+          lg: 'row',
+          xl: 'row'
+        }}
       >
-        <img src={pet.picture} alt={`${pet.name}`} />
-      </Grid>
-      <Grid
-        component='div'
-        className='pet'
-        container
-        item
-        lg={6}
-        justify='space-between'
-      >
-        <Grid className='pet__name' container direction='column'>
-          <Box
-            component='span'
-            fontSize='h3.fontSize'
-            fontWeight='fontWeight.Bold'
-          >
-            <ArrowBack fontSize='large' />
-            {pet.name}
-          </Box>
+        <Grid
+          container
+          item
+          lg={6}
+          justify='center'
+          component='div'
+          className='detail__picture'
+        >
+          <img src={pet.picture} alt={`${pet.name}`} />
         </Grid>
         <Grid
           component='div'
-          className='information'
+          className='pet'
           container
+          item
+          lg={6}
           justify='space-between'
-          direction='column'
         >
-          <Box component='span' className='information__genre'>
-            <PetsIcon
-              className={
-                pet.gender === 'Female'
-                  ? 'information__genre-icon pink'
-                  : 'information__genre-icon blue'
-              }
-            />{' '}
-            {pet.gender}
-          </Box>
-          <Typography className='information__detail'>{pet.info}</Typography>
-          <Button
-            variant='contained'
-            color='primary'
-            size='large'
-            disableElevation
-            className='detail__button'
-            onClick={() => handleClick(pet.id)}
+          <Grid className='pet__name' container direction='column'>
+            <Box
+              component='span'
+              fontSize='h3.fontSize'
+              fontWeight='fontWeight.Bold'
+            >
+              <ArrowBack fontSize='large' />
+              {pet.name}
+            </Box>
+          </Grid>
+          <Grid
+            component='div'
+            className='information'
+            container
+            justify='space-between'
+            direction='column'
           >
-            Apply for Adoption
-          </Button>
+            <Box component='span' className='information__genre'>
+              <PetsIcon
+                className={
+                  pet.gender === 'Female'
+                    ? 'information__genre-icon pink'
+                    : 'information__genre-icon blue'
+                }
+              />{' '}
+              {pet.gender}
+            </Box>
+            <Typography className='information__detail'>{pet.info}</Typography>
+            <Button
+              variant='contained'
+              color='primary'
+              size='large'
+              disableElevation
+              className='detail__button'
+              onClick={() => handleClick(pet.id)}
+            >
+              Apply for Adoption
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </Box>
   )
 }
 
