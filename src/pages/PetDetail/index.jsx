@@ -11,11 +11,36 @@ function PetDetailPage({ match, history }) {
   }
 
   return (
-    <Grid component='section' className='detail' container direction='row'>
-      <Grid item justify='center' component='div' className='detail__picture'>
+    <Grid
+      component='section'
+      className='detail'
+      container
+      direction={{
+        xs: 'column',
+        sm: 'column',
+        md: 'row',
+        lg: 'row',
+        xl: 'row'
+      }}
+    >
+      <Grid
+        container
+        item
+        lg={6}
+        justify='center'
+        component='div'
+        className='detail__picture'
+      >
         <img src={pet.picture} alt={`${pet.name}`} />
       </Grid>
-      <Grid component='div' className='pet' container justify='space-between'>
+      <Grid
+        component='div'
+        className='pet'
+        container
+        item
+        lg={6}
+        justify='space-between'
+      >
         <Grid className='pet__name' container direction='column'>
           <Box
             component='span'
@@ -31,7 +56,6 @@ function PetDetailPage({ match, history }) {
           className='information'
           container
           direction='column'
-          justify='space-between'
         >
           <Box component='span' className='information__genre'>
             <PetsIcon

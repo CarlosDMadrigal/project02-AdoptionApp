@@ -83,7 +83,7 @@ header {
     }
   }
   .team {
-    padding: 3rem 10% 0;
+    padding: 3rem 10% 3rem;
     color: #343f53;
     height: auto;
     background-color: #fafafa;
@@ -151,10 +151,10 @@ header {
 .list {
   padding: 5% 10%;
   color: #343f53;
-  height: 70vh;
+  height: auto;
   &__card {
-    width: 15rem;
-    height: 19rem;
+    width: 20rem;
+    height: 22rem;
     margin-bottom: 2rem;
     transition: transform 1s;
     &:hover {
@@ -202,12 +202,11 @@ header {
   }
 }
 .detail {
-  padding: 5rem 10%;
+  padding: 3rem 10%;
   height: auto;
   &__picture {
     display: flex;
     justify-content: center;
-    width: 50%;
     img {
       height: 25rem;
       transition: transform 0.5s;
@@ -217,15 +216,10 @@ header {
     }
   }
   .pet {
-    width: 50%;
     color: #343f53;
     padding: 0 0 0 4rem;
-    &__name {
-      height: 4rem;
-    }
   }
   .information {
-    width: 100%;
     padding: 0 0 0 2.5rem;
     .blue {
       color: #5b92e5;
@@ -239,7 +233,6 @@ header {
     }
     &__detail {
       margin-top: 2rem;
-      width: 100%;
       margin-bottom: 1rem;
     }
   }
@@ -288,4 +281,20 @@ header {
 }
 
 @media (max-width: 600px) {
+  .detail {
+    padding: 0;
+    .pet {
+      padding: 1rem;
+      .information {
+        padding: 0;
+        padding-top: 1rem;
+      }
+    }
+  }
+  .adoption {
+    padding: 0;
+    .form {
+      padding: 1rem;
+    }
+  }
 }
