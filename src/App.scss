@@ -151,6 +151,7 @@ header {
 .list {
   padding: 5% 10%;
   color: #343f53;
+  min-height: 71.9vh;
   height: auto;
   &__card {
     width: 20rem;
@@ -177,11 +178,8 @@ header {
 }
 
 .search {
-  width: 20rem;
   padding: 0 10%;
   .search__form {
-    width: 30rem;
-    margin-left: 1rem;
     &-input {
       &:focus {
         border-color: #399ced;

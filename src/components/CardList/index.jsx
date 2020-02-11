@@ -46,7 +46,7 @@ function CardList({ data, handleCardClick }) {
             <Box
               fontSize='h5.fontSize'
               component='span'
-            >{`...It seems we don't have any other pet right now, maybe later ;)`}</Box>
+            >{`...It seems we don't have any other pets right now, maybe later ;)`}</Box>
           </Grid>
         )}
       </Grid>

@@ -60,7 +60,7 @@ function PetDetailPage({ match, history }) {
           <Box component='span' className='information__genre'>
             <PetsIcon
               className={
-                pet.gender === 'female'
+                pet.gender === 'Female'
                   ? 'information__genre-icon pink'
                   : 'information__genre-icon blue'
               }

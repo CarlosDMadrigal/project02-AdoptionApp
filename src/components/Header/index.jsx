@@ -18,9 +18,19 @@ function NavBar({ value, handleChange }) {
       <AppBar position='static' className='headers'>
         <Toolbar className='header'>
           <Grid container justify='space-between' alignItems='center'>
-            <Typography variant='h6' className='header__name'>
-              {APPLICATION_NAME}
-            </Typography>
+            <Box
+              display={{
+                xs: 'none',
+                sm: 'none',
+                md: 'block',
+                lg: 'block',
+                xl: 'block'
+              }}
+            >
+              <Typography variant='h6' className='header__name'>
+                {APPLICATION_NAME}
+              </Typography>
+            </Box>
             <Tabs
               value={value}
               onChange={handleChange}
