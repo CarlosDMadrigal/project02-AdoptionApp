@@ -138,7 +138,7 @@ function TeamSection() {
         >
           <Avatar
             alt='Lizzie Rolly'
-            src=''
+            src='https://images.unsplash.com/photo-1552699498-ec96cf4765ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=715&q=80'
             className='team-pictures__member-figure'
           />
           <Box
