@@ -13,15 +13,12 @@ jobs:
         
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: npm install
       run: |
         npm install
     - name: Production Build
       run: |
         npm build
-    - name: Unit Tests
-      run: |
-        npm test
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
