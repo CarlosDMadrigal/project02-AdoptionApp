@@ -1,3 +1,6 @@
+**This is an app that simulates an adoption site.**
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
